@@ -156,3 +156,62 @@
 //   }
 // }
 
+
+class Game{
+  constructor() {
+    this.missed = 0;
+    this.phrases = this.createPhrases();
+    this.activePhrase = null;
+  }
+
+  createPhrases() {
+    const phraseList = [
+      "may the force be with you",
+      "your focus determines your reality",
+      "stay on target",
+      "there is no such thing as luck",
+      "never tell me the odds",
+    ];
+
+    const phraseObjects = [];
+
+    phraseList.forEach(phrase => {
+      phraseObjects.push(new Phrase(phrase));
+    });
+    return phraseObjects;
+  }
+
+  startGame() {
+    
+  }
+
+  getRandomPhrase() {
+    const randomNum = Math.floor(Math.random() * this.phrases.length);
+    return this.phrases[randomNum];
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
